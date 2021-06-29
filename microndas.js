@@ -17,7 +17,7 @@ let tempo = (tempoPadrao, tempoTotal) => {
 // ---------- Função principal de menu do Microndas ----------
 let menuMicrondas = (botao, tempoUsuario, tempoProprio) => {
     switch (botao) {
-        case 1:
+        case 'Pipoca':
             prato = comidas[botao-1];
             tempoPadrao = tempoComidas[comidas.indexOf(botao)];
             if(tempoProprio == 'Sim') {
@@ -26,7 +26,7 @@ let menuMicrondas = (botao, tempoUsuario, tempoProprio) => {
                 tempoTotal = tempoUsuario + tempoPadrao;
             }
             return 'Prato selecionado: '+comidas[botao-1]+'\nTempo padrão: '+tempoComidas[comidas.indexOf('Pipoca')]+'\nTempo Selecionado: '+tempoUsuario+'\nTempo total: '+tempoTotal+'\n'+tempo(tempoPadrao, tempoTotal);
-        case 2:
+        case 'Macarrão':
             prato = comidas[botao-1];
             tempoPadrao = tempoComidas[comidas.indexOf(botao)];
             if(tempoProprio == 'Sim') {
@@ -35,7 +35,7 @@ let menuMicrondas = (botao, tempoUsuario, tempoProprio) => {
                 tempoTotal = tempoUsuario + tempoPadrao;
             }
             return 'Prato selecionado: '+comidas[botao-1]+'\nTempo padrão: '+tempoComidas[comidas.indexOf('Macarrão')]+'\nTempo Selecionado: '+tempoUsuario+'\nTempo total: '+tempoTotal+'\n'+tempo(tempoPadrao, tempoTotal);
-        case 3:
+        case 'Carne':
             prato = comidas[botao-1];
             tempoPadrao = tempoComidas[comidas.indexOf(botao)];
             if(tempoProprio == 'Sim') {
@@ -44,7 +44,7 @@ let menuMicrondas = (botao, tempoUsuario, tempoProprio) => {
                 tempoTotal = tempoUsuario + tempoPadrao;
             }
             return 'Prato selecionado: '+comidas[botao-1]+'\nTempo padrão: '+tempoComidas[comidas.indexOf('Carne')]+'\nTempo Selecionado: '+tempoUsuario+'\nTempo total: '+tempoTotal+'\n'+tempo(tempoPadrao, tempoTotal);
-        case 4:
+        case 'Feijão':
             prato = comidas[botao-1];
             tempoPadrao = tempoComidas[comidas.indexOf(botao)];
             if(tempoProprio == 'Sim') {
@@ -53,7 +53,7 @@ let menuMicrondas = (botao, tempoUsuario, tempoProprio) => {
                 tempoTotal = tempoUsuario + tempoPadrao;
             }
             return 'Prato selecionado: '+comidas[botao-1]+'\nTempo padrão: '+tempoComidas[comidas.indexOf('Feijão')]+'\nTempo Selecionado: '+tempoUsuario+'\nTempo total: '+tempoTotal+'\n'+tempo(tempoPadrao, tempoTotal);
-        case 5:
+        case 'Brigadeiro':
             prato = comidas[botao-1];
             tempoPadrao = tempoComidas[comidas.indexOf(botao)];
             if(tempoProprio == 'Sim') {
@@ -67,4 +67,4 @@ let menuMicrondas = (botao, tempoUsuario, tempoProprio) => {
     }
 }
 
-console.log(menuMicrondas(1, 5, 'Sim')); // 1 = Selecionando pipoca /// 5 = Tempo colocado pelo usuário /// 'Sim' = Quer apenas o próprio tempo
+console.log(menuMicrondas('Pipoca', 5, 'Sim')); // 'Pipoca' = Selecionando pipoca /// 5 = Tempo colocado pelo usuário /// 'Sim' = Quer apenas o próprio tempo
